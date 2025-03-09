@@ -1,2 +1,2 @@
-![Local Image](images/TZ.jpg)
+![Local Image](Images/TZ.jpeg)
 # Tanzania_Waterpoint_Operational_Status_Prediction

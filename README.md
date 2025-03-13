@@ -26,7 +26,7 @@ Most wells in Tanzania are funded by the Government of Tanzania
 
 Most people access water from wells without payment, likely because these wells are intended for community benefit rather than profit.
 
-![Local Image](Images/soft_water.png)
+![Local Image](Images/soft water.png)
 
 Soft water lacks calcium and magnesium salts, which in excess can be harmful to both health and homes. Examples include rainwater and distilled water. Our visualization shows that communities in Tanzania primarily consume soft water.
 

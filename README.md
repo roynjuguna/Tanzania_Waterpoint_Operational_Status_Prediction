@@ -11,16 +11,35 @@ The dataset contains detailed information on waterpoints across Tanzania, captur
 
 Below are some of the findings after exploratory data analysis:
 
+
+![Local Image](Images/pie.png)
+Our pie chart indicates that around 55% of water pumps are fully functional, 7% are operational but require repairs, and 38% are non-functional.
+
+
 ![Local Image](Images/funder.png)
 Most wells in Tanzania are funded by the Government of Tanzania
 
+![Local Image](Images/Payment.png)
+Most people access water from wells without payment, likely because these wells are intended for community benefit rather than profit.
+
+![Local Image](Images/soft_water.png)
+soft water lacks calcium and magnesium salts, which in excess can be harmful to both health and homes. Examples include rainwater and distilled water. Our visualization shows that communities in Tanzania primarily consume soft water.
+
+
+![Local Image](Images/functional.png)
+Most of the functional and non functional water pumps are never paid for, again this might be because of the fact that they are communal
+
+
 
 ## Modeling
-XGBoost was selected for its efficiency, robustness, and ability to handle structured data effectively. To improve model performance, we tuned key hyperparameters such as the number of trees, tree depth, learning rate, and regularization terms using Grid Search and Random Search. These optimizations enhanced predictive accuracy while preventing overfitting.
+We utilize **XGBoost** to predict the operational status of water pumps in Tanzania due to its efficiency, robustness, and superior performance over **Random Forest**. XGBoost delivers **79.91% accuracy**, a **7% improvement** over RF, while also achieving **better recall (76% vs. 54%)** and **stronger generalization** (Macro F1: **0.68**, Weighted F1: **0.79**). These metrics demonstrate its ability to produce **balanced and reliable predictions**, which are crucial for identifying pumps that need maintenance.  
+
+To optimize performance, we fine-tune key hyperparameters such as **n_estimators, max_depth, learning rate, alpha, and lambda**, leveraging **Grid Search or Random Search with cross-validation**. This fine-tuning process enhances the model's ability to **prevent overfitting, improve accuracy, and generalize well across diverse datasets**. By using a data-driven approach, our model can help **prioritize water pump repairs, optimize resource allocation, and contribute to sustainable water management** in Tanzania.
+
 
 ## Evaluation
-The model's performance was assessed using accuracy, precision, recall, and F1-score. XGBoost outperformed other models, particularly in identifying non-functional water pumps, making it a valuable tool for proactive maintenance planning.
+The model’s performance was evaluated using accuracy, precision, recall, and F1-score to ensure reliable predictions. XGBoost demonstrated 79.91% accuracy, a 7% improvement over Random Forest, and significantly better recall (76% vs. 54%) for identifying non-functional water pumps. With a Macro F1-score of 0.68 and a Weighted F1-score of 0.79, XGBoost provided more balanced predictions across all classes. This strong performance makes it a valuable tool for proactive maintenance planning, enabling authorities to prioritize repairs, allocate resources efficiently, and improve access to clean water in Tanzania.
 
 ## Conclusion
-By accurately predicting water pump functionality, this model provides actionable insights that can help government agencies and NGOs optimize maintenance schedules, reduce downtime, and improve access to clean water for communities in need.
+By accurately predicting the operational status of water pumps, this model provides **critical insights** that can support government agencies, NGOs, and local authorities in making **data-driven decisions** for water resource management. By identifying pumps at risk of failure, stakeholders can **proactively plan maintenance**, allocate resources more effectively, and **prioritize repairs** before breakdowns occur. This reduces downtime, minimizes disruptions in water access, and ensures that communities, especially those in remote or underserved areas, **have a reliable supply of clean water**. Additionally, the model enhances **long-term sustainability** by helping organizations track pump performance trends, implement preventive maintenance strategies, and optimize infrastructure investments. Ultimately, this predictive approach contributes to **improving public health, reducing water scarcity, and advancing efforts toward sustainable water access for all.**
 

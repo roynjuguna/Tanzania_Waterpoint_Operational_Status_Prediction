@@ -7,6 +7,14 @@ This project aims to predict the operational status of water pumps across Tanzan
 ## Business and Data Understanding
 Access to clean water is crucial for public health and sustainable development. This project serves stakeholders such as the government and NGOs, who are responsible for maintaining and repairing water points. By predicting pump functionality, they can prioritize interventions and allocate resources efficiently. The dataset includes features like pump characteristics, geographic locations, and historical maintenance records.
 
+The dataset contains detailed information on waterpoints across Tanzania, capturing a variety of features that may influence the operational status of each waterpoint. These features range from geographic details to waterpoint characteristics, such as funding source, installation details, water quality, and management practices.
+
+Below are some of the findings after exploratory data analysis:
+
+![Local Image](Images/funder.png)
+Most wells in Tanzania are funded by the Government of Tanzania
+
+
 ## Modeling
 XGBoost was selected for its efficiency, robustness, and ability to handle structured data effectively. To improve model performance, we tuned key hyperparameters such as the number of trees, tree depth, learning rate, and regularization terms using Grid Search and Random Search. These optimizations enhanced predictive accuracy while preventing overfitting.
 
